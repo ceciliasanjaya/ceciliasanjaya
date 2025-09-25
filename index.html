@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name – Portfolio</title>
+  <meta name="description" content="Your Name — student and developer. Projects in iOS, systems, and ML. Contact and resume." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Your Name – Portfolio" />
+  <meta property="og:description" content="Projects, resume, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourname.com/" />
+  <meta property="og:image" content="https://yourname.com/assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Minimal styling -->
+  <style>
+    :root { --fg:#0f172a; --muted:#475569; --bg:#ffffff; --accent:#2563eb; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif; color:var(--fg); background:var(--bg); }
+    header, main, footer { max-width:900px; margin:0 auto; padding:24px; }
+    header { padding-top:48px; }
+    h1 { font-size:40px; margin:0 0 8px; }
+    h2 { margin:32px 0 12px; }
+    p { margin:0 0 12px; color:var(--muted); }
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); }
+    .card { border:1px solid #e5e7eb; border-radius:14px; padding:16px; background:white; }
+    .pill { display:inline-block; padding:2px 10px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; margin-right:8px; }
+    .muted { color:var(--muted); }
+    .row { display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
+    .avatar { width:84px; height:84px; border-radius:50%; object-fit:cover; background:#f1f5f9; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid #e5e7eb; background:white; }
+    footer { padding-bottom:60px; color:var(--muted); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  </style>
+
+  <!-- Person schema (update fields) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Your Name",
+    "url":"https://yourname.com",
+    "sameAs":[
+      "https://www.linkedin.com/in/yourhandle",
+      "https://github.com/yourhandle"
+    ],
+    "jobTitle":"Student / Developer",
+    "affiliation":"Your School or Company"
+  }
+  </script>
+</head>
+<body>
+  <a class="sr-only" href="#content">Skip to content</a>
+  <header>
+    <div class="row">
+      <img class="avatar" src="assets/headshot.svg" alt="Headshot of Your Name" />
+      <div>
+        <h1>Your Name</h1>
+        <p>Short 1–2 sentence bio: your focus areas and what you like to build.</p>
+        <div class="row">
+          <a class="btn" href="resume.html">Resume</a>
+          <a class="btn" href="mailto:you@yourname.com">you@yourname.com</a>
+          <a class="btn" href="https://github.com/yourhandle">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/yourhandle">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Project One</h3>
+        <p class="muted">SwiftUI • MVVM • SwiftData</p>
+        <p>Brief impact-oriented description (problem → solution → result). Example: 30% faster navigation via view model memoization.</p>
+        <p><a href="https://github.com/yourhandle/project-one">Code</a> · <a href="#">Demo</a></p>
+      </article>
+
+      <article class="card">
+        <h3>SIMD Array Summation</h3>
+        <p class="muted">C • SSE/AVX • Benchmarks</p>
+        <p>Vectorized reducer with loop unrolling; 6.2× speedup vs scalar on 1e8 elements. Includes correctness tests & perf plots.</p>
+        <p><a href="https://github.com/yourhandle/simd-sum">Code</a></p>
+      </article>
+
+      <article class="card">
+        <h3>RNN for Language ID</h3>
+        <p class="muted">PyTorch • NLP</p>
+        <p>Character-level RNN to classify language of short phrases; ablations on hidden size and dropout with error analysis.</p>
+        <p><a href="https://github.com/yourhandle/langid-rnn">Code</a> · <a href="posts/writeup.html">Write-up</a></p>
+      </article>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="card">
+      <span class="pill">Role @ Org</span>
+      <p>1–2 bullets with measurable outcomes.</p>
+    </div>
+
+    <h2>Writing</h2>
+    <ul>
+      <li><a href="posts/sample-post.html">Sample post title</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Your Name. Built with vanilla HTML/CSS.
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
