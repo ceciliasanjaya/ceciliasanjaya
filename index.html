@@ -110,6 +110,47 @@
     /* ====== Hero ====== */
     .hero{ padding:54px 0 28px }
     .hero-wrap{ display:flex; gap:24px; align-items:center; flex-wrap:wrap }
+    /* ====== Education Card ====== */
+    .edu-card {
+      margin-left: auto; /* pushes it to the right side */
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      min-width: 280px;
+      max-width: 360px;
+    }
+    
+    .edu-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #071d39; /* deep navy background */
+      padding: 8px;
+    }
+    
+    .edu-name {
+      font-weight: 600;
+    }
+    
+    .edu-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    
+    /* Responsive: on smaller screens, make the card stack below */
+    @media (max-width: 900px) {
+      .edu-card {
+        width: 100%;
+        margin-left: 0;
+        order: 3; /* pushes it below the name/bio */
+      }
+    }
     .avatar{
       width:104px; height:104px; border-radius:24px; object-fit:cover;
       box-shadow:0 0 0 6px color-mix(in srgb, var(--accent) 22%, transparent);
@@ -202,6 +243,15 @@
             <a class="btn" href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
+        <!-- New Education Card  -->
+        <div class="edu-card">
+          <img class="edu-logo" src="assets/berkeley-seal.svg" alt="UC Berkeley Seal">
+          <div>
+            <div class="edu-name">University of California, Berkeley</div>
+            <div class="edu-meta">B.S. EECS · Class of 2027</div>
+          </div>
+        </div>
+        <!-- End Education Card -->
       </div>
     </div>
   </header>
