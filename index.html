@@ -57,7 +57,7 @@
     a:hover { opacity: .9; }
     img { display: block; max-width: 100%; }
 
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 48px; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding-inline: clamp(16px, 5vw, 48px); }
     @media (max-width: 768px) {
       .container {
         padding: 0 24px; /* smaller padding for small screens */
@@ -78,7 +78,7 @@
     .btn.icon { display: inline-flex; align-items: center; gap: 8px; }
 
     /* ====== Hero ====== */
-    .hero { padding: 54px 0 28px; }
+    .hero { padding-block: 54px 28px; }
     .hero-wrap {
       display: grid;
       grid-template-columns: auto 1fr auto;
