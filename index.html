@@ -26,6 +26,38 @@
       --maxw: 980px;
     }
 
+    /* Make each project card a column layout */
+    .card{
+      display:flex;
+      flex-direction:column;
+    }
+    
+    /* Buttons row: allow wrapping + spacing */
+    .project-links{
+      display:flex;
+      flex-wrap:wrap;      /*  key: no overlap */
+      gap:12px;            /* space between buttons on wrap */
+      margin-top:12px;
+      /* If you want buttons to stick to the bottom of the card: */
+      /* margin-top:auto;  */
+    }
+    
+    /* Keep buttons readable when narrow */
+    .btn.small{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:6px 14px;
+      font-size:0.9rem;
+      border-radius:8px;
+      white-space:nowrap;  /* keeps label intact; container will wrap instead */
+    }
+    
+    /* Don’t let cards get too skinny in the grid */
+    .grid{
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* was 260–280px */
+    }
+
     /* Dark mode (auto) */
     @media (prefers-color-scheme: dark) {
       :root {
