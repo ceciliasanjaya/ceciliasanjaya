@@ -119,11 +119,11 @@
     }
 
     .avatar {
-      width: 104px;
-      height: 104px;
-      border-radius: 24px;
+      width: clamp(80px, 12vw, 160px);  /* minimum 80px, scales with screen, max 160px */
+      height: clamp(80px, 12vw, 160px);
+      border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 22%, transparent);
+      box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 22%, transparent);
       background: #cbd5e1;
     }
 
