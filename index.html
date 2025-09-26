@@ -121,10 +121,13 @@
     .avatar {
       width: clamp(80px, 12vw, 160px);  /* minimum 80px, scales with screen, max 160px */
       height: clamp(80px, 12vw, 160px);
-      border-radius: 30%;
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
       object-fit: cover;
-      box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 22%, transparent);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 22%, transparent);
       background: #cbd5e1;
+      flex: 0 0 auto;
+      align-self: start;
     }
 
     h1 { font-size: 40px; margin: 0 0 6px; line-height: 1.15; }
