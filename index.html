@@ -41,10 +41,12 @@
       cursor: pointer;
       user-select: none;
       margin-top: 8px;
+      height: 180px
     }
     
     .flash-inner{
       position: relative;
+      height: 100%;
       transform-style: preserve-3d;
       transition: transform .55s cubic-bezier(.22,.61,.36,1);
     }
@@ -58,7 +60,12 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 14px;
-      min-height: 120px;           /* set the height you want for the description area */
+      position: absolute;
+      inset: 0;
+      overflow: auto;
+    
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       display: grid;
       align-content: start;
       gap: 8px;
